@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+
+:root {
+    --font-title: 'The Nautigal', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1em;
+    box-shadow: 0 0 1em 0.1em rgba(122, 122, 122, 0.336);
+}
+
+nav {
+    margin-right: 1.3em;
+}
+
+nav li {
+    display: inline;
+    margin-left: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-size: 2em;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    color: black;
+    transition: 0.6s color;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+    color: rgb(212, 129, 19);
+}
+
+/* CSS DA PÁGINA PRINCIPAL */
+
+.banner {
+    width: 100%;
+    display: block;
+}
+
+.sobre {
+    text-align: center;
+    padding: 1em 2em;    
+}
+
+h2 {
+    border-bottom: 2px solid rgb(212, 129, 19);
+    clear: left;
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 3em;
+    letter-spacing: 0.05em;
+}
+
+h2::before {
+    content: "✂";
+    color: rgb(212, 129, 19);
+    font-size: 0.7em;
+    font-weight: lighter;
+}
+
+.img-utensilios {
+    width: 6em;
+    float: left;
+    margin: 1em 1em 0 0;    
+}
+
+.simble-title {
+    color: rgb(212, 129, 19);
+    font-size: 0.7em;
+    font-weight: lighter;
+}
+
+.sobre p, .mapa p, .video p {
+    margin: 1em 0;
+    font-size: 1.1em;
+    letter-spacing: 0.07em;
+    line-height: 1.3em;
+}
+
+.missao {
+    color: rgb(212, 129, 19);
+}
+
+.beneficios {
+    background-image: url("img/beneficios.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;  
+    padding: 1em 2em;
+}
+
+.beneficios h2 {
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid rgb(212, 129, 19);
+}
+
+.beneficios h2:first-letter {
+    color: rgb(212, 129, 19);
+}
+
+ul.list-bene {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 0.07em;
+    display: inline-block;
+    vertical-align: top;
+    margin: 4em 3em; 
+    padding: 2em 2em; 
+}
+
+.itens-list-bene:first-child {
+    border-bottom: 1px solid rgb(212, 129, 19);   
+}
+
+.itens-list-bene::before {
+    content: "★";
+    color: rgb(212, 129, 19);
+}
+
+.mapa {
+    padding: 1em 2em;
+    text-align: center;
+}
+
+.video { 
+    text-align: center;  
+    padding: 1em 2em;
+    background: linear-gradient(to top, rgb(71, 71, 71), white);
+}
+
+/* CSS DA PÁGINA DE PRODUTOS */
+
+.itens-produtos {
+    width: 98vw;
+    padding: 50px 0;
+    text-align: center;              
+}
+
+.itens-produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 200px;      
+    margin: 10px;
+    padding: 20px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.6s;
+    box-shadow: 6px 6px 15px 2px rgba(77, 77, 77, 0.671);
+}
+
+.itens-produtos img {
+    width: 100px;
+}
+
+.itens-produtos li:hover {
+    border-color: rgb(212, 129, 19);
+}
+
+.itens-produtos li:active {
+    border-color: green;
+}
+
+.itens-produtos h2 {
+    font-size: 1.7em;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    transition: 0.6s;
+}
+
+.itens-produtos li:hover h2 {
+    color: rgb(212, 129, 19);
+    border-bottom: 2px solid black;
+}
+
+.produto-descriçao {
+    font-size: 1em;
+}
+
+.produto-preço {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* CSS DA PÁGINA DE CONTATO */
+
+.formulario {
+    width: 98vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin: 40px 0;  
+}
+
+fieldset {
+    border: none;
+    margin: 20px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.input-padrao {
+    display: block;
+    padding: 6px 10px;
+    width: 50vw;
+}
+
+.checkbox {
+    margin-top: 30px;
+}
+
+select {
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-color: rgb(212, 129, 19);
+    border: 2px solid white;
+    color: white;
+    margin-top: 20px;
+    width: auto;
+    padding: 7px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    border: 2px solid rgb(212, 129, 19);
+    background-color: white;
+    color: rgb(212, 129, 19);
+    transform: scale(1.1);
+    
+}
+
+.tabela-horario {
+    width: 98vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 40vw;
+}
+
+caption {
+    font-size: 1.3em;
+}
+
+thead {
+    background-color: rgb(212, 129, 19);
+}
+
+tbody {
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(212, 128, 19, 0.267);
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+footer {    
+    text-align: center;
+    background-image: url("img/bg.jpg");
+    padding: 40px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.432);
+}
+
+footer p {
+    color: white;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 625px) {
+
+    .video > iframe {
+        width: 100%;
+    }
+
+    .mapa > iframe {
+        width: 100%;
+    }   
+}
+
+@media screen and (max-width: 555px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        font-size: 0.8em;       
+    }
+
+    nav li {
+        border-bottom: 2px solid rgb(212, 129, 19);
+    }
+
+    h2 {
+        font-size: 2em; 
+    }
+
+    section.beneficios {
+        padding: 1em 0;
+    }
+
+    ul.list-bene {
+        width: 71vw;
+        padding: 5px;
+    }
+
+    .sobre p, .beneficios li, .mapa p, .video p {
+        font-size: 0.8em;
+    }
+
+    .sobre p {
+        text-align: justify;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    table  {
+        width: 70%;
+    }
+
+    th,td,caption {
+        font-size: 1em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
